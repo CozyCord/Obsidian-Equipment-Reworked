@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": {
+      "item": "obsidianequipmentrework:obsidian_ingot"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "O O"
+  ],
+  "result": {
+    "item": "obsidianequipmentrework:obsidian_helmet"
+  },
+  "show_notification": true
+}

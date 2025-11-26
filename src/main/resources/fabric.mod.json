@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "obsidianequipmentrework",
+	"version": "${version}",
+	"name": "Obsidian Equipment Reworked",
+	"description": "This is the CozyStudios rework of the Exline Obsidian Equipment mod!",
+	"authors": [
+		"Tokimi",
+        "CozyStudios"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/obsidianequipmentrework/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.cozystudios.obsidianequipmentrework.ObsidianEquipmentRework"
+		],
+		"client": [
+          "net.cozystudios.obsidianequipmentrework.ObsidianEquipmentReworkClient"
+		],
+		"fabric-datagen": [
+          "net.cozystudios.obsidianequipmentrework.ObsidianEquipmentReworkDataGenerator"
+		]
+	},
+	"mixins": [
+      "obsidianequipmentrework.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

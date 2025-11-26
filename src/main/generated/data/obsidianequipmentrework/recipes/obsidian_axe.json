@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": {
+      "item": "obsidianequipmentrework:obsidian_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "OO",
+    "OS",
+    " S"
+  ],
+  "result": {
+    "item": "obsidianequipmentrework:obsidian_axe"
+  },
+  "show_notification": true
+}
