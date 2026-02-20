@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": "obsidianequipmentrework:obsidian_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "O",
+    "O",
+    "S"
+  ],
+  "result": {
+    "id": "obsidianequipmentrework:obsidian_sword",
+    "count": 1
+  }
+}
