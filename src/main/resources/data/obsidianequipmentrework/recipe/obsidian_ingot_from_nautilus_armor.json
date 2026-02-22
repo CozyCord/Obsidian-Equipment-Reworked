@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "obsidianequipmentrework:obsidian_nautilus_armor",
+  "result": {
+    "id": "obsidianequipmentrework:obsidian_ingot",
+    "count": 1
+  }
+}

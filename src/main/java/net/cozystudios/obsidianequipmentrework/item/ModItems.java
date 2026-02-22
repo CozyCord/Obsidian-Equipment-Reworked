@@ -185,6 +185,21 @@ public class ModItems {
             new Item(settings("obsidian_horse_armor").horseArmor(ModArmorMaterials.OBSIDIAN).maxCount(1)));
     *///?}
 
+    // --- Spear (1.21.11+) ---
+
+    //? if >=1.21.11 {
+    /*public static final Item OBSIDIAN_SPEAR = register("obsidian_spear",
+            new Item(settings("obsidian_spear").spear(ModToolMaterials.OBSIDIAN,
+                    1.1f, 1.14f, 0.45f, 2.75f, 7.25f, 6.0f, 5.1f, 9.375f, 4.6f)));
+    *///?}
+
+    // --- Nautilus Armor (1.21.11+) ---
+
+    //? if >=1.21.11 {
+    /*public static final Item OBSIDIAN_NAUTILUS_ARMOR = register("obsidian_nautilus_armor",
+            new Item(settings("obsidian_nautilus_armor").nautilusArmor(ModArmorMaterials.OBSIDIAN).maxCount(1)));
+    *///?}
+
     // --- Registration helper ---
 
     private static <T extends Item> T register(String name, T item) {
@@ -205,8 +220,14 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.addAfter(Items.DIAMOND_SWORD, OBSIDIAN_SWORD);
             entries.addAfter(Items.DIAMOND_AXE, OBSIDIAN_AXE);
+            //? if >=1.21.11 {
+            /*entries.addAfter(Items.DIAMOND_SPEAR, OBSIDIAN_SPEAR);
+            *///?}
             entries.addAfter(Items.DIAMOND_BOOTS, OBSIDIAN_HELMET, OBSIDIAN_CHESTPLATE, OBSIDIAN_LEGGINGS, OBSIDIAN_BOOTS);
             entries.addAfter(Items.DIAMOND_HORSE_ARMOR, OBSIDIAN_HORSE_ARMOR);
+            //? if >=1.21.11 {
+            /*entries.addAfter(Items.DIAMOND_NAUTILUS_ARMOR, OBSIDIAN_NAUTILUS_ARMOR);
+            *///?}
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

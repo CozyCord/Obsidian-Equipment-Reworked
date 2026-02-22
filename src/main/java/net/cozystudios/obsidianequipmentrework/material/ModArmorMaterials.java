@@ -125,7 +125,8 @@ public class ModArmorMaterials {
                     EquipmentType.HELMET, 3,
                     EquipmentType.CHESTPLATE, 8,
                     EquipmentType.LEGGINGS, 6,
-                    EquipmentType.BOOTS, 3
+                    EquipmentType.BOOTS, 3,
+                    EquipmentType.BODY, 15
             ),
             12,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
@@ -158,7 +159,8 @@ public class ModArmorMaterials {
                     EquipmentType.HELMET, 3,
                     EquipmentType.CHESTPLATE, 8,
                     EquipmentType.LEGGINGS, 6,
-                    EquipmentType.BOOTS, 3
+                    EquipmentType.BOOTS, 3,
+                    EquipmentType.BODY, 15
             ),
             12,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,

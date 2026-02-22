@@ -50,6 +50,15 @@ public class ModLootTableModifiers {
             LootTables.RUINED_PORTAL_CHEST
     );
 
+    //? if >=1.21.11 {
+    /*private static final Set<RegistryKey<LootTable>> OBSIDIAN_NAUTILUS_ARMOR_LOOT_TABLES = Set.of(
+            LootTables.SHIPWRECK_SUPPLY_CHEST,
+            LootTables.UNDERWATER_RUIN_SMALL_CHEST,
+            LootTables.UNDERWATER_RUIN_BIG_CHEST,
+            LootTables.BURIED_TREASURE_CHEST
+    );
+    *///?}
+
     public static void registerLootTableModifiers() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (OBSIDIAN_HORSE_ARMOR_LOOT_TABLES.contains(key)) {
@@ -59,6 +68,14 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.OBSIDIAN_HORSE_ARMOR));
                 tableBuilder.pool(poolBuilder);
             }
+            //? if >=1.21.11 {
+            /*if (OBSIDIAN_NAUTILUS_ARMOR_LOOT_TABLES.contains(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .conditionally(RandomChanceLootCondition.builder(0.004f))
+                        .with(ItemEntry.builder(ModItems.OBSIDIAN_NAUTILUS_ARMOR));
+                tableBuilder.pool(poolBuilder);
+            }
+            *///?}
         });
     }
 }
