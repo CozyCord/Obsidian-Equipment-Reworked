@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": { "item": "obsidianequipmentrework:obsidian_ingot" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "pattern": [
+    "OO",
+    " S",
+    " S"
+  ],
+  "result": {
+    "id": "obsidianequipmentrework:obsidian_hoe",
+    "count": 1
+  }
+}

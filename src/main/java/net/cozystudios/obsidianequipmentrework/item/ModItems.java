@@ -37,7 +37,6 @@ public class ModItems {
     public static final Item OBSIDIAN_INGOT = register("obsidian_ingot",
             new Item(settings("obsidian_ingot")));
 
-    // --- Tools ---
 
     //? if <1.21 {
     /*public static final SwordItem OBSIDIAN_SWORD = register("obsidian_sword",
@@ -111,7 +110,6 @@ public class ModItems {
             new HoeItem(ModToolMaterials.OBSIDIAN, -2f, 0.0f, settings("obsidian_hoe")));
     *///?}
 
-    // --- Armor ---
 
     //? if <1.21 {
     /*public static final ArmorItem OBSIDIAN_HELMET = register("obsidian_helmet",
@@ -167,7 +165,6 @@ public class ModItems {
                     .maxDamage(EquipmentType.BOOTS.getMaxDamage(35))));
     *///?}
 
-    // --- Horse Armor ---
 
     //? if <1.21 {
     /*public static final HorseArmorItem OBSIDIAN_HORSE_ARMOR = register("obsidian_horse_armor",
@@ -185,7 +182,6 @@ public class ModItems {
             new Item(settings("obsidian_horse_armor").horseArmor(ModArmorMaterials.OBSIDIAN).maxCount(1)));
     *///?}
 
-    // --- Spear (1.21.11+) ---
 
     //? if >=1.21.11 {
     /*public static final Item OBSIDIAN_SPEAR = register("obsidian_spear",
@@ -193,14 +189,12 @@ public class ModItems {
                     1.1f, 1.14f, 0.45f, 2.75f, 7.25f, 6.0f, 5.1f, 9.375f, 4.6f)));
     *///?}
 
-    // --- Nautilus Armor (1.21.11+) ---
 
     //? if >=1.21.11 {
     /*public static final Item OBSIDIAN_NAUTILUS_ARMOR = register("obsidian_nautilus_armor",
             new Item(settings("obsidian_nautilus_armor").nautilusArmor(ModArmorMaterials.OBSIDIAN).maxCount(1)));
     *///?}
 
-    // --- Registration helper ---
 
     private static <T extends Item> T register(String name, T item) {
         //? if <1.21 {
