@@ -3,9 +3,6 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": "obsidianequipmentrework:obsidian_nautilus_armor",
-  "result": {
-    "id": "obsidianequipmentrework:obsidian_ingot",
-    "count": 1
-  }
+  "ingredient": ${ingOpen}"obsidianequipmentrework:obsidian_nautilus_armor"${ingClose},
+  "result": ${cookingResultOpen}"obsidianequipmentrework:obsidian_ingot"${cookingResultClose}
 }

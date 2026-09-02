@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": ${ingOpen}"obsidianequipmentrework:obsidian_upgrade_smithing_template"${ingClose},
+  "base": ${ingOpen}"minecraft:diamond_pickaxe"${ingClose},
+  "addition": ${ingOpen}"obsidianequipmentrework:obsidian_ingot"${ingClose},
+  "result": {
+    "${itemIdentifier}": "obsidianequipmentrework:obsidian_pickaxe"
+  }
+}

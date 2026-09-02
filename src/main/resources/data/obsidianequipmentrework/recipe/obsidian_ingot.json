@@ -3,9 +3,6 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.7,
-  "ingredient": "minecraft:obsidian",
-  "result": {
-    "id": "obsidianequipmentrework:obsidian_ingot",
-    "count": 1
-  }
+  "ingredient": ${ingOpen}"minecraft:obsidian"${ingClose},
+  "result": ${cookingResultOpen}"obsidianequipmentrework:obsidian_ingot"${cookingResultClose}
 }

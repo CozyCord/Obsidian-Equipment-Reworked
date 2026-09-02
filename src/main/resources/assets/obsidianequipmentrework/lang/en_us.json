@@ -14,5 +14,12 @@
   "item.obsidianequipmentrework.obsidian_horse_armor": "Obsidian Horse Armor",
 
   "item.obsidianequipmentrework.obsidian_spear": "Obsidian Spear",
-  "item.obsidianequipmentrework.obsidian_nautilus_armor": "Obsidian Nautilus Armor"
+  "item.obsidianequipmentrework.obsidian_nautilus_armor": "Obsidian Nautilus Armor",
+
+  "item.obsidianequipmentrework.obsidian_upgrade_smithing_template": "Obsidian Upgrade",
+  "upgrade.obsidianequipmentrework.obsidian_upgrade": "Obsidian Upgrade",
+  "item.obsidianequipmentrework.smithing_template.obsidian_upgrade.applies_to": "Diamond Equipment",
+  "item.obsidianequipmentrework.smithing_template.obsidian_upgrade.ingredients": "Obsidian Ingot",
+  "item.obsidianequipmentrework.smithing_template.obsidian_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
+  "item.obsidianequipmentrework.smithing_template.obsidian_upgrade.additions_slot_description": "Add Obsidian Ingot"
 }

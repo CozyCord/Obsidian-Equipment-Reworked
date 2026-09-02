@@ -8,6 +8,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 //? if >=1.21 && <1.21.2 {
 import net.minecraft.item.AnimalArmorItem;
 //?}
@@ -196,6 +197,10 @@ public class ModItems {
     *///?}
 
 
+    public static final Item OBSIDIAN_UPGRADE_SMITHING_TEMPLATE = register("obsidian_upgrade_smithing_template",
+            ObsidianUpgradeTemplate.create(settings("obsidian_upgrade_smithing_template").rarity(Rarity.UNCOMMON)));
+
+
     private static <T extends Item> T register(String name, T item) {
         //? if <1.21 {
         /*return Registry.register(Registries.ITEM, new Identifier(ObsidianEquipmentRework.MOD_ID, name), item);
@@ -209,6 +214,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.addAfter(Items.DIAMOND_HOE, OBSIDIAN_SHOVEL, OBSIDIAN_PICKAXE, OBSIDIAN_AXE, OBSIDIAN_HOE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.addAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, OBSIDIAN_UPGRADE_SMITHING_TEMPLATE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": ${ingOpen}"minecraft:netherite_upgrade_smithing_template"${ingClose},
+  "base": ${ingOpen}"obsidianequipmentrework:obsidian_shovel"${ingClose},
+  "addition": ${ingOpen}"minecraft:netherite_ingot"${ingClose},
+  "result": {
+    "${itemIdentifier}": "minecraft:netherite_shovel"
+  }
+}

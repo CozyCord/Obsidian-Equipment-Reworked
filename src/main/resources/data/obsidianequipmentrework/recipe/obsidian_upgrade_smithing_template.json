@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": ${ingOpen}"minecraft:diamond"${ingClose},
+    "C": ${ingOpen}"minecraft:obsidian"${ingClose},
+    "S": ${ingOpen}"obsidianequipmentrework:obsidian_upgrade_smithing_template"${ingClose}
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "${itemIdentifier}": "obsidianequipmentrework:obsidian_upgrade_smithing_template",
+    "count": 2
+  }
+}
