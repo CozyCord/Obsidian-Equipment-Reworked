@@ -23,6 +23,11 @@ import net.minecraft.item.equipment.EquipmentType;
 /*import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 *///?}
+//? if =1.20.1 {
+/*import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.fabric.api.event.Event;
+import java.lang.reflect.Constructor;
+*///?}
 
 public class ModItems {
 
@@ -184,10 +189,37 @@ public class ModItems {
     *///?}
 
 
-    //? if >=1.21.11 {
+    //? if =1.20.1 {
+    /*public static final Item OBSIDIAN_SPEAR = registerVanillaBackportSpear();
+    *///?} elif >=1.21.11 {
     /*public static final Item OBSIDIAN_SPEAR = register("obsidian_spear",
             new Item(settings("obsidian_spear").spear(ModToolMaterials.OBSIDIAN,
                     1.1f, 1.14f, 0.45f, 2.75f, 7.25f, 6.0f, 5.1f, 9.375f, 4.6f)));
+    *///?}
+
+    //? if =1.20.1 {
+    /*private static Item registerVanillaBackportSpear() {
+        if (!FabricLoader.getInstance().isModLoaded("vanillabackport")) {
+            ObsidianEquipmentRework.LOGGER.info("VanillaBackport not present; obsidian_spear will not be registered.");
+            return null;
+        }
+        try {
+            Class<?> spearItemClass = Class.forName("com.blackgear.vanillabackport.common.level.items.spear.SpearItem");
+            Constructor<?> ctor = spearItemClass.getDeclaredConstructor(
+                    net.minecraft.item.ToolMaterial.class,
+                    float.class, float.class, float.class, float.class, float.class,
+                    float.class, float.class, float.class, float.class,
+                    Item.Settings.class);
+            Item spear = (Item) ctor.newInstance(
+                    ModToolMaterials.OBSIDIAN,
+                    1.10f, 1.14f, 0.45f, 2.75f, 7.25f, 6.0f, 5.1f, 9.375f, 4.6f,
+                    settings("obsidian_spear"));
+            return register("obsidian_spear", spear);
+        } catch (ReflectiveOperationException e) {
+            ObsidianEquipmentRework.LOGGER.error("Failed to register obsidian_spear via VanillaBackport SpearItem", e);
+            return null;
+        }
+    }
     *///?}
 
 
@@ -233,8 +265,54 @@ public class ModItems {
             *///?}
         });
 
+        //? if =1.20.1 {
+        /*if (OBSIDIAN_SPEAR != null) {
+            Identifier latePhase = new Identifier(ObsidianEquipmentRework.MOD_ID, "obsidian_spear_insert");
+            Event<ItemGroupEvents.ModifyEntries> combatEvent =
+                    ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT);
+            combatEvent.addPhaseOrdering(Event.DEFAULT_PHASE, latePhase);
+            combatEvent.register(latePhase, entries -> {
+                Item diamondSpear = Registries.ITEM.get(new Identifier("minecraft", "diamond_spear"));
+                if (diamondSpear != Items.AIR) {
+                    entries.addAfter(diamondSpear, OBSIDIAN_SPEAR);
+                } else {
+                    entries.add(OBSIDIAN_SPEAR);
+                }
+            });
+
+            ItemGroupEvents.MODIFY_ENTRIES_ALL.register((group, entries) -> {
+                Item diamondSpear = Registries.ITEM.get(new Identifier("minecraft", "diamond_spear"));
+                if (diamondSpear == Items.AIR) return;
+                reorderSpearList(entries.getDisplayStacks(), diamondSpear);
+                reorderSpearList(entries.getSearchTabStacks(), diamondSpear);
+            });
+        }
+        *///?}
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.addAfter(Items.GOLD_INGOT, OBSIDIAN_INGOT);
         });
     }
+
+    //? if =1.20.1 {
+    /*private static void reorderSpearList(java.util.List<ItemStack> stacks, Item diamondSpear) {
+        if (OBSIDIAN_SPEAR == null) return;
+        int diamondIdx = -1;
+        int obsidianIdx = -1;
+        for (int i = 0; i < stacks.size(); i++) {
+            Item item = stacks.get(i).getItem();
+            if (item == diamondSpear && diamondIdx == -1) diamondIdx = i;
+            else if (item == OBSIDIAN_SPEAR && obsidianIdx == -1) obsidianIdx = i;
+        }
+        if (diamondIdx < 0) return;
+        if (obsidianIdx == diamondIdx + 1) return;
+        if (obsidianIdx >= 0) {
+            ItemStack obsidianStack = stacks.remove(obsidianIdx);
+            if (obsidianIdx < diamondIdx) diamondIdx--;
+            stacks.add(diamondIdx + 1, obsidianStack);
+        } else {
+            stacks.add(diamondIdx + 1, new ItemStack(OBSIDIAN_SPEAR));
+        }
+    }
+    *///?}
 }

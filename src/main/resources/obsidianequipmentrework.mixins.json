@@ -6,6 +6,10 @@
 		"ItemIdMigrationMixin",
 		"ItemIdMigrationNbtMixin"
 	],
+	"client": [
+		"MinecraftClientSpearSearchMixin",
+		"CreativeSearchResultsMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},

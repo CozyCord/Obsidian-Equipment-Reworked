@@ -31,5 +31,8 @@
 		"minecraft": ">=${minecraftVersion}",
 		"java": ">=17",
 		"fabric-api": "*"
+	},
+	"suggests": {
+		"vanillabackport": "*"
 	}
 }
